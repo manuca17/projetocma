@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/museusPageFrag">
+
+    <fragment
+        android:id="@+id/museusPageFrag"
+        android:name="com.example.projetocma.museusPageFrag"
+        android:label="fragment_museus_page"
+        tools:layout="@layout/fragment_museus_page" >
+        <action
+            android:id="@+id/action_museusPageFrag_to_museusExplore"
+            app:destination="@id/museusExplore" />
+    </fragment>
+    <fragment
+        android:id="@+id/museusExplore"
+        android:name="com.example.projetocma.museusExplore"
+        android:label="fragment_museus_explore"
+        tools:layout="@layout/fragment_museus_explore" />
+</navigation>
