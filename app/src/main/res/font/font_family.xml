@@ -21,4 +21,11 @@
     <font
         android:fontWeight="500"
         app:font="@font/outfitsemibold" />
+    <font
+        android:fontWeight="500"
+        app:font="@font/montserratlight" />
+
+    <font
+        android:fontWeight="500"
+        app:font="@font/monsterratregular" />
 </font-family>

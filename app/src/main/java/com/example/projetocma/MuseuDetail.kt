@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.projetocma.databinding.FragmentMuseuDetailBinding
 
 class MuseuDetail : Fragment() {
 
-
+    private var _binding: FragmentMuseuDetailBinding? = null
+    private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -17,8 +19,26 @@ class MuseuDetail : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_museu_detail, container, false)
+        _binding = FragmentMuseuDetailBinding.inflate(inflater, container, false)
+        return binding.root
+
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Retrieve arguments
+        val name = arguments?.getString("name")
+        val imageResId = arguments?.getInt("image")
+
+        // Now you can use 'name' and 'imageResId' in your fragment
+
+        // Example: Set the name in a TextView
+        binding.textViewMuseumName.text = name
+
+        // Example: Set the image in an ImageView
+        imageResId?.let { binding.museumImage.setImageResource(it) }
+    }
+
 
 }
