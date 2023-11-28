@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.projetocma.databinding.FragmentMuseusPageBinding
 
 
-class museusPageFrag : Fragment() {
+class MuseusPageFrag : Fragment() {
     private var _binding: FragmentMuseusPageBinding? = null
     private val binding get() = _binding!!
 

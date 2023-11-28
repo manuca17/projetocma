@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/museusPageFrag"
-        android:name="com.example.projetocma.museusPageFrag"
+        android:name="com.example.projetocma.MuseusPageFrag"
         android:label="fragment_museus_page"
         tools:layout="@layout/fragment_museus_page" >
         <action
@@ -16,7 +16,31 @@
     </fragment>
     <fragment
         android:id="@+id/museusExplore"
-        android:name="com.example.projetocma.museusExplore"
+        android:name="com.example.projetocma.MuseusExplore"
         android:label="fragment_museus_explore"
-        tools:layout="@layout/fragment_museus_explore" />
+        tools:layout="@layout/fragment_museus_explore" >
+        <action
+            android:id="@+id/action_museusExplore_to_museuDetail"
+            app:destination="@id/museuDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/museuDetail"
+        android:name="com.example.projetocma.MuseuDetail"
+        android:label="fragment_museu_detail"
+        tools:layout="@layout/fragment_museu_detail"/>
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.example.projetocma.RegisterFragment"
+        android:label="fragment_register_fragment"
+        tools:layout="@layout/fragment_register_fragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.projetocma.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.projetocma.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
 </navigation>
