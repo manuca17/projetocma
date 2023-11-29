@@ -12,8 +12,8 @@ import models.Museu
 
 class MuseusExplore : Fragment(), Museu.OnItemClickListener {
 
-    val names = arrayOf("asdasdas", "asdasdasdas")
-    val img = arrayOf(R.drawable.imageplaceholder, R.drawable.imageplaceholder).toIntArray()
+    val names = arrayOf("Museu da Sé", "Museu do Pio", "Museu do Prado", "Museu De La Plata", "Museu da Marinha")
+    val img = arrayOf(R.drawable.museu, R.drawable.museupio,R.drawable.museudoprado, R.drawable.museudelaplata, R.drawable.museudamarinha).toIntArray()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
