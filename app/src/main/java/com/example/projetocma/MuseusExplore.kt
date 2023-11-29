@@ -7,27 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridView
 import androidx.navigation.fragment.findNavController
+import com.example.projetocma.databinding.FragmentMuseusExploreBinding
 import models.Museu
 
 
 class MuseusExplore : Fragment(), Museu.OnItemClickListener {
 
-    val names = arrayOf("Museu da Sé", "Museu do Pio", "Museu do Prado", "Museu De La Plata", "Museu da Marinha")
-    val img = arrayOf(R.drawable.museu, R.drawable.museupio,R.drawable.museudoprado, R.drawable.museudelaplata, R.drawable.museudamarinha).toIntArray()
+    private lateinit var binding: FragmentMuseusExploreBinding
+
+    private val names = arrayOf("Museu da Sé", "Museu do Pio", "Museu do Prado", "Museu De La Plata", "Museu da Marinha")
+    private val img = arrayOf(R.drawable.museu, R.drawable.museupio, R.drawable.museudoprado, R.drawable.museudelaplata, R.drawable.museudamarinha).toIntArray()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_museus_explore, container, false)
-
-
+        binding = FragmentMuseusExploreBinding.inflate(inflater, container, false)
+        val view = binding.root
 
         val museuAdapter = Museu(requireContext(), names, img, this)
-
-        val gridView: GridView = view.findViewById(R.id.gridView)
+        val gridView: GridView = binding.gridView
         gridView.adapter = museuAdapter
-
 
         return view
     }
@@ -41,7 +41,5 @@ class MuseusExplore : Fragment(), Museu.OnItemClickListener {
         bundle.putInt("image", selectedImage)
 
         findNavController().navigate(R.id.museuDetail, bundle)
-
-
     }
 }

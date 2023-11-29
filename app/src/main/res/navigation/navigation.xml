@@ -27,7 +27,11 @@
         android:id="@+id/museuDetail"
         android:name="com.example.projetocma.MuseuDetail"
         android:label="fragment_museu_detail"
-        tools:layout="@layout/fragment_museu_detail"/>
+        tools:layout="@layout/fragment_museu_detail">
+        <action
+            android:id="@+id/action_museuDetail_to_eventFragment"
+            app:destination="@id/eventFragment" />
+    </fragment>
     <fragment
         android:id="@+id/register_fragment"
         android:name="com.example.projetocma.RegisterFragment"
@@ -43,4 +47,9 @@
         android:name="com.example.projetocma.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.example.projetocma.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" />
 </navigation>

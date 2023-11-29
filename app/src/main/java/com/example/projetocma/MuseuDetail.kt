@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.projetocma.databinding.FragmentMuseuDetailBinding
 
 class MuseuDetail : Fragment() {
@@ -26,6 +27,10 @@ class MuseuDetail : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.eventosButton.setOnClickListener{
+            findNavController().navigate(R.id.eventFragment)
+        }
 
         // Retrieve arguments
         val name = arguments?.getString("name")

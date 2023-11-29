@@ -16,6 +16,10 @@
         app:font="@font/monsterratitalic" />
 
     <font
+        android:fontWeight="400"
+        app:font="@font/monsterratbold" />
+
+    <font
         android:fontWeight="500"
         app:font="@font/outfitmedium" />
     <font
@@ -26,6 +30,6 @@
         app:font="@font/montserratlight" />
 
     <font
-        android:fontWeight="500"
+        android:fontWeight="900"
         app:font="@font/monsterratregular" />
 </font-family>
