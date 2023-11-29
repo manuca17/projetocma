@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_museusPageFrag_to_museusExplore"
             app:destination="@id/museusExplore" />
+        <action
+            android:id="@+id/action_museusPageFrag_to_QRCode"
+            app:destination="@id/QRCode" />
     </fragment>
     <fragment
         android:id="@+id/museusExplore"
@@ -52,4 +55,9 @@
         android:name="com.example.projetocma.EventFragment"
         android:label="fragment_event"
         tools:layout="@layout/fragment_event" />
+    <activity
+        android:id="@+id/QRCode"
+        android:name="com.example.projetocma.QRCode"
+        android:label="QRCode"
+        tools:layout="@layout/activity_qrcode" />
 </navigation>

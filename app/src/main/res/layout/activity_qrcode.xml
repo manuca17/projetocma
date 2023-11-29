@@ -1,0 +1,63 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="360dp"
+        android:layout_height="444dp"
+
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27">
+
+        <com.journeyapps.barcodescanner.BarcodeView
+            android:id="@+id/barcode_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/qr_code_image" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textqrcode"
+        android:layout_width="414dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="24dp"
+        android:text="O QRCode encontra-se junto ao quadro da obra"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:lineHeight="36sp" />
+
+    <Button
+        android:id="@+id/selecionar"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_text"
+        android:text="Selecionar Obra"
+        android:textAlignment="center"
+        android:textColor="#0A0A0E"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textqrcode"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textqrcode"
+        app:layout_constraintTop_toBottomOf="@+id/textqrcode"
+        app:lineHeight="18sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
