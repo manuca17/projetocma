@@ -1,41 +1,33 @@
 package com.example.projetocma
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.fragment.app.Fragment
+import android.widget.Toast
 
-class AccountFragmentUsername : Fragment() {
+class AlterarNomeActivity : AppCompatActivity() {
 
-    private lateinit var editTextNome: EditText
+    private lateinit var editTextNome : EditText
     private lateinit var editTextSobreNome: EditText
     private lateinit var guardarTextView: TextView
     private lateinit var cancelarTextView: TextView
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflar o layout para este fragmento
-        return inflater.inflate(R.layout.fragment_account_username, container, false)
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_account_username)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        editTextNome = view.findViewById(R.id.editTextNome)
-        editTextSobreNome = view.findViewById(R.id.editTextSobreNome)
-        guardarTextView = view.findViewById(R.id.guardar)
-        cancelarTextView = view.findViewById(R.id.cancelar)
+        editTextNome = findViewById(R.id.editTextNome)
+        editTextSobreNome = findViewById(R.id.editTextSobreNome)
+        guardarTextView = findViewById(R.id.guardar)
+        cancelarTextView = findViewById(R.id.cancelar)
 
         guardarTextView.setOnClickListener { salvarAlteracoes() }
 
         cancelarTextView.setOnClickListener { cancelarEdicao() }
     }
+
 
     private fun salvarAlteracoes() {
         val novoNome = editTextNome.text.toString().trim()
@@ -46,6 +38,6 @@ class AccountFragmentUsername : Fragment() {
     }
 
     private fun cancelarEdicao() {
-        requireActivity().finish()
+        finish()
     }
 }
