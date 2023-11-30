@@ -59,19 +59,10 @@
         android:id="@+id/qrCode"
         android:name="com.example.projetocma.QrCode"
         android:label="fragment_qr_code"
-        tools:layout="@layout/fragment_qr_code" >
-        <action
-            android:id="@+id/action_qrCode_to_museuDetail"
-            app:destination="@id/museuDetail" />
-    </fragment>
+        tools:layout="@layout/fragment_qr_code" />
     <fragment
         android:id="@+id/calendario2"
         android:name="com.example.projetocma.Calendario"
         android:label="fragment_calendario"
         tools:layout="@layout/fragment_calendario" />
-    <fragment
-        android:id="@+id/timePicker"
-        android:name="com.example.projetocma.TimePicker"
-        android:label="fragment_time_picker"
-        tools:layout="@layout/fragment_time_picker" />
 </navigation>
