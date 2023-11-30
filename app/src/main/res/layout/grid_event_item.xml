@@ -6,10 +6,12 @@
     android:layout_height="match_parent">
 
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="362dp"
         android:layout_height="348dp"
         android:clickable="true"
+        app:strokeColor="#525252"
+        app:strokeWidth="2dp"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="8dp"
@@ -71,7 +73,7 @@
 
         <!-- Your content goes here -->
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
