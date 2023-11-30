@@ -32,6 +32,11 @@
     <string name="categorie_museum_2">Categoria 2</string>
     <string name="categorie_museum_3">Categoria 3</string>
     <string name="museumconnect">MuseumConnect</string>
+    <string name="scan_obra">Faça Scan da Obra</string>
+    <string name="scan_obra2">O QRCode encontra-se junto ao quadro da obra</string>
+    <string name="scan_obra3">Selecionar Obra</string>
+    <string name="calendario">A sua Reserva</string>
+    <string name="calendario_2">Selecionar o dia e a hora que pretende</string>
 
 
 </resources>

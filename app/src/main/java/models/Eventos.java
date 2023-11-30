@@ -23,12 +23,11 @@ public class Eventos extends BaseAdapter {
 
     LayoutInflater inflater;
 
-    public Eventos(Context context, String[] name, int[] image, String[] date, Museu.OnItemClickListener onItemClickListener) {
+    public Eventos(Context context, String[] name, int[] image, String[] date) {
         this.context = context;
         this.name = name;
         this.image = image;
         this.date = date;
-        this.onItemClickListener = onItemClickListener;
     }
 
     private Museu.OnItemClickListener onItemClickListener;
@@ -55,14 +54,16 @@ public class Eventos extends BaseAdapter {
         }
 
         if(convertView == null){
-            convertView = inflater.inflate(R.layout.grid_item,null);
+            convertView = inflater.inflate(R.layout.grid_event_item,null);
         }
 
-        ImageView imageView = convertView.findViewById(R.id.gridImage);
-        TextView textView = convertView.findViewById(R.id.gridName);
+        ImageView imageView = convertView.findViewById(R.id.eventImage);
+        TextView textView = convertView.findViewById(R.id.textViewEventTitle);
+        TextView textView1 = convertView.findViewById(R.id.textViewEventDate);
 
         imageView.setImageResource(image[position]);
         textView.setText(name[position]);
+        textView1.setText(date[position]);
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,10 +6,12 @@
     android:layout_height="match_parent">
 
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="362dp"
         android:layout_height="348dp"
         android:clickable="true"
+        app:strokeColor="#525252"
+        app:strokeWidth="2dp"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="8dp"
@@ -28,32 +30,33 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/textViewEventTitle"
+                android:layout_width="335dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/monsterratregular"
-                android:text="Joan Miro/ ganda moca men "
+                android:text="Joan Miro/ ganda moca menasdasdsadasdasdads "
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.137"
+                app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textViewEventDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/monsterratregular"
                 android:text="17 JUN 2003 - 07 JAN 2024"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.083"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewEventTitle" />
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/eventImage"
                 android:src="@drawable/joanmiro"
                 android:layout_width="320dp"
                 android:layout_height="230dp"
@@ -70,7 +73,7 @@
 
         <!-- Your content goes here -->
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

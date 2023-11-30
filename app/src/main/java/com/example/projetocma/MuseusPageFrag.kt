@@ -30,6 +30,11 @@ class MuseusPageFrag : Fragment() {
             // Navigate to the destination fragment
             findNavController().navigate(R.id.museusExplore)
         }
+        binding.qrCodeButton.setOnClickListener {
+            // Navigate to the destination fragment
+            findNavController().navigate(R.id.qrCode)
+        }
+
     }
 
 }
