@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.google.zxing.ResultPoint
 import com.journeyapps.barcodescanner.BarcodeCallback
 import com.journeyapps.barcodescanner.BarcodeResult
@@ -58,8 +59,9 @@ class QrCode : Fragment() {
                     // Verifica se o texto do QR code é o URL desejado
                     if (it.text == targetURL) {
                         // Se for o URL desejado, direcione para a próxima página
-                        val intent = Intent(requireContext(), MuseusExplore::class.java)
-                        startActivity(intent)
+                            // Navigate to the destination fragment
+                            findNavController().navigate(R.id.museuDetail)
+
                     } else {
                         // Se não for o URL desejado, exibe uma mensagem ao usuário
                         Toast.makeText(
