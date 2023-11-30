@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Projetocma"
         tools:targetApi="31">
         <activity
+            android:name=".PaymentAcknowledgment"
+            android:exported="false" />
+        <activity
+            android:name=".AccountFragmentTickets"
+            android:exported="false" />
+        <activity
+            android:name=".AccountFragmentContact"
+            android:exported="false" />
+        <activity
+            android:name=".AccountFragmentPassword"
+            android:exported="false" />
+        <activity
+            android:name=".AccountFragmentUsername"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
