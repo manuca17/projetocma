@@ -94,7 +94,7 @@
         app:layout_constraintVertical_bias="0.739" />
 
     <TimePicker
-        android:id="@+id/timePicker2"
+        android:id="@+id/timePicker"
         android:layout_width="255dp"
         android:layout_height="141dp"
         android:layout_centerHorizontal="true"

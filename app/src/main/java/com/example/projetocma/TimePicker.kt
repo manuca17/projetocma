@@ -12,7 +12,7 @@ class TimePicker : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val picker = view.findViewById<TimePicker>(R.id.timePicker2)
+        val picker = view.findViewById<TimePicker>(R.id.timePicker)
         picker.setIs24HourView(true)
     }
 
