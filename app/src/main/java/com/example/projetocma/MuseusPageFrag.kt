@@ -32,8 +32,9 @@ class MuseusPageFrag : Fragment() {
         }
         binding.qrCodeButton.setOnClickListener {
             // Navigate to the destination fragment
-            findNavController().navigate(R.id.QRCode)
+            findNavController().navigate(R.id.qrCode)
         }
+
     }
 
 }
