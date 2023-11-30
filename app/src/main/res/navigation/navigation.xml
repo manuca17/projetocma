@@ -65,4 +65,24 @@
         android:name="com.example.projetocma.Calendario"
         android:label="fragment_calendario"
         tools:layout="@layout/fragment_calendario" />
+    <fragment
+        android:id="@+id/accountFragmentPassword2"
+        android:name="com.example.projetocma.AccountFragmentPassword"
+        android:label="fragment_account_password2"
+        tools:layout="@layout/fragment_account_password" />
+    <fragment
+        android:id="@+id/accountFragmentContact2"
+        android:name="com.example.projetocma.AccountFragmentContact"
+        android:label="fragment_account_contact2"
+        tools:layout="@layout/fragment_account_contact" />
+    <fragment
+        android:id="@+id/accountFragmentTickets2"
+        android:name="com.example.projetocma.AccountFragmentTickets"
+        android:label="fragment_account_tickets2"
+        tools:layout="@layout/fragment_account_tickets" />
+    <fragment
+        android:id="@+id/accountFragmentUsername2"
+        android:name="com.example.projetocma.AccountFragmentUsername"
+        android:label="fragment_account_username2"
+        tools:layout="@layout/fragment_account_username" />
 </navigation>
