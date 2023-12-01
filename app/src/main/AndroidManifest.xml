@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Projetocma"
         tools:targetApi="31">
         <activity
+            android:name=".TicketsMuseum"
+            android:exported="false" />
+        <activity
+            android:name=".TicketsEvent"
+            android:exported="false" />
+        <activity
+            android:name=".TicketsBasic"
+            android:exported="false" />
+        <activity
+            android:name=".Tickets"
+            android:exported="false" />
+        <activity
             android:name=".PaymentAcknowledgment"
             android:exported="false" />
         <activity
@@ -36,10 +48,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CaptureAct"
+        <activity
+            android:name=".CaptureAct"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"/>
+            android:theme="@style/zxing_CaptureTheme" />
     </application>
 
 </manifest>
