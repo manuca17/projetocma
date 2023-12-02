@@ -32,6 +32,10 @@ class MuseuDetail : Fragment() {
             findNavController().navigate(R.id.eventFragment)
         }
 
+        binding.reserveMuseumCodeButton.setOnClickListener {
+            findNavController().navigate(R.id.fragmentTickets)
+        }
+
         // Retrieve arguments
         val name = arguments?.getString("name")
         val imageResId = arguments?.getInt("image")

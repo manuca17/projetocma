@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_museuDetail_to_eventFragment"
             app:destination="@id/eventFragment" />
+        <action
+            android:id="@+id/action_museuDetail_to_fragmentTickets"
+            app:destination="@id/fragmentTickets" />
     </fragment>
     <fragment
         android:id="@+id/register_fragment"
@@ -54,7 +57,11 @@
         android:id="@+id/eventFragment"
         android:name="com.example.projetocma.EventFragment"
         android:label="fragment_event"
-        tools:layout="@layout/fragment_event" />
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_eventFragment_to_eventDetail2"
+            app:destination="@id/eventDetail" />
+    </fragment>
     <fragment
         android:id="@+id/qrCode"
         android:name="com.example.projetocma.QrCode"
@@ -74,4 +81,68 @@
         android:name="com.example.projetocma.TimePicker"
         android:label="fragment_time_picker"
         tools:layout="@layout/fragment_time_picker" />
+    <fragment
+        android:id="@+id/eventDetail"
+        android:name="com.example.projetocma.EventDetail"
+        android:label="fragment_event_detail"
+        tools:layout="@layout/fragment_event_detail" >
+        <action
+            android:id="@+id/action_eventDetail_to_eventBottomSheet"
+            app:destination="@id/eventBottomSheet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventBottomSheet"
+        android:name="com.example.projetocma.EventBottomSheet"
+        android:label="fragment_event_bottom_sheet"
+        tools:layout="@layout/fragment_event_bottom_sheet" />
+
+    <fragment
+        android:id="@+id/reservePage"
+        android:name="com.example.projetocma.ReservePage"
+        android:label="fragment_reserve_page"
+        tools:layout="@layout/fragment_reserve_page" />
+
+    <fragment
+        android:id="@+id/fragmentTickets"
+        android:name="com.example.projetocma.Tickets"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_tickets" >
+        <action
+            android:id="@+id/action_fragmentTickets_to_ticketBasicc"
+            app:destination="@id/ticketBasicc" />
+        <action
+            android:id="@+id/action_fragmentTickets_to_ticketEventt"
+            app:destination="@id/ticketEventt" />
+        <action
+            android:id="@+id/action_fragmentTickets_to_ticketMuseum"
+            app:destination="@id/ticketMuseum" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketBasicc"
+        android:name="com.example.projetocma.TicketBasic"
+        android:label="fragment_ticket_basicc"
+        tools:layout="@layout/fragment_ticket_basicc" >
+        <action
+            android:id="@+id/action_ticketBasicc_to_reservePage"
+            app:destination="@id/reservePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketEventt"
+        android:name="com.example.projetocma.TicketEvent"
+        android:label="fragment_ticket_eventt"
+        tools:layout="@layout/fragment_ticket_eventt" >
+        <action
+            android:id="@+id/action_ticketEventt_to_reservePage"
+            app:destination="@id/reservePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketMuseum"
+        android:name="com.example.projetocma.TicketMuseum"
+        android:label="fragment_ticket_museum"
+        tools:layout="@layout/fragment_ticket_museum" >
+        <action
+            android:id="@+id/action_ticketMuseum_to_reservePage"
+            app:destination="@id/reservePage" />
+    </fragment>
 </navigation>

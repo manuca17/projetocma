@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class Tickets : Fragment() {
     override fun onCreateView(
@@ -21,18 +22,15 @@ class Tickets : Fragment() {
         val ticketMuseumIcon = view.findViewById<ImageView>(R.id.ticket_museum_icone)
 
         ticketBasicIcon.setOnClickListener {
-            val intent = Intent(requireActivity(), TicketsBasic::class.java)
-            startActivity(intent)
+            findNavController().navigate(R.id.ticketBasicc)
         }
 
         ticketEventIcon.setOnClickListener {
-            val intent = Intent(requireActivity(), TicketsEvent::class.java)
-            startActivity(intent)
+            findNavController().navigate(R.id.ticketEventt)
         }
 
         ticketMuseumIcon.setOnClickListener {
-            val intent = Intent(requireActivity(), TicketsMuseum::class.java)
-            startActivity(intent)
+            findNavController().navigate(R.id.ticketMuseum)
         }
 
         return view
