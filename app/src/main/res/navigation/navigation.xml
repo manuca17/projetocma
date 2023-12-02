@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_museusPageFrag_to_qrCode"
             app:destination="@id/qrCode" />
+        <action
+            android:id="@+id/action_museusPageFrag_to_reservePage3"
+            app:destination="@id/reservePage" />
     </fragment>
     <fragment
         android:id="@+id/museusExplore"
@@ -49,7 +52,20 @@
         android:id="@+id/accountFragment"
         android:name="com.example.projetocma.AccountFragment"
         android:label="fragment_account"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_accountFragmentContact2"
+            app:destination="@id/accountFragmentContact" />
+        <action
+            android:id="@+id/action_accountFragment_to_accountFragmentPassword2"
+            app:destination="@id/accountFragmentPassword2" />
+        <action
+            android:id="@+id/action_accountFragment_to_accountFragmentTickets"
+            app:destination="@id/accountFragmentTickets" />
+        <action
+            android:id="@+id/action_accountFragment_to_accountFragmentUsername2"
+            app:destination="@id/accountFragmentUsername2" />
+    </fragment>
     <fragment
         android:id="@+id/eventFragment"
         android:name="com.example.projetocma.EventFragment"
@@ -61,8 +77,43 @@
         android:label="fragment_qr_code"
         tools:layout="@layout/fragment_qr_code" />
     <fragment
-        android:id="@+id/calendario2"
+        android:id="@+id/calendario"
         android:name="com.example.projetocma.Calendario"
         android:label="fragment_calendario"
         tools:layout="@layout/fragment_calendario" />
+    <fragment
+        android:id="@+id/accountFragmentContact"
+        android:name="com.example.projetocma.AccountFragmentContact2"
+        android:label="fragment_account_contact2"
+        tools:layout="@layout/fragment_account_contact" />
+    <fragment
+        android:id="@+id/accountFragmentPassword2"
+        android:name="com.example.projetocma.AccountFragmentPassword2"
+        android:label="fragment_account_password2"
+        tools:layout="@layout/fragment_account_password" />
+    <fragment
+        android:id="@+id/accountFragmentTickets"
+        android:name="com.example.projetocma.AccountFragmentTickets2"
+        android:label="fragment_account_tickets2"
+        tools:layout="@layout/fragment_account_tickets" />
+    <fragment
+        android:id="@+id/accountFragmentUsername2"
+        android:name="com.example.projetocma.AccountFragmentUsername2"
+        android:label="fragment_account_username2"
+        tools:layout="@layout/fragment_account_username" />
+    <fragment
+        android:id="@+id/paymentAcknowledgment2"
+        android:name="com.example.projetocma.PaymentAcknowledgment"
+        android:label="fragment_payment_acknowledgment2"
+        tools:layout="@layout/fragment_payment_acknowledgment" />
+    <fragment
+        android:id="@+id/tickets"
+        android:name="com.example.projetocma.Tickets2"
+        android:label="fragment_tickets2"
+        tools:layout="@layout/fragment_tickets" />
+    <fragment
+        android:id="@+id/reservePage"
+        android:name="com.example.projetocma.ReservePage"
+        android:label="fragment_reserve_page"
+        tools:layout="@layout/fragment_reserve_page" />
 </navigation>

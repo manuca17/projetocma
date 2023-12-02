@@ -1,21 +1,61 @@
+@file:JvmName("PaymentAcknowledgmentKt")
+
 package com.example.projetocma
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 
-class PaymentAcknowledgment : AppCompatActivity() {
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [PaymentAcknowledgment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class PaymentAcknowledgment : Fragment() {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.payment_acknowledgment)
+        arguments?.let {
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
+        }
+    }
 
-        val textViewMessage1 = findViewById<TextView>(R.id.textViewMessage1)
-        val textViewMessage2 = findViewById<TextView>(R.id.textViewMessage2)
-        val textViewMessage3 = findViewById<TextView>(R.id.textViewMessage3)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_payment_acknowledgment, container, false)
+    }
 
-
-        textViewMessage1.text = "THANKS"
-        textViewMessage2.text = "CHECK YOUR EMAIL FOR TICKET CONFIRMATION."
-        textViewMessage3.text = "WE WAIT FOR YOU"
+    companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment PaymentAcknowledgment2.
+         */
+        // TODO: Rename and change types and number of parameters
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            PaymentAcknowledgment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
+                }
+            }
     }
 }
