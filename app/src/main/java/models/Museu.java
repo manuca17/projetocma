@@ -64,12 +64,9 @@ public class Museu extends BaseAdapter {
             imageView.setImageResource(image[position]);
             textView.setText(name[position]);
 
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (onItemClickListener != null) {
-                    onItemClickListener.onItemClick(position);
-                }
+        convertView.setOnClickListener(v -> {
+            if (onItemClickListener != null) {
+                onItemClickListener.onItemClick(position);
             }
         });
 

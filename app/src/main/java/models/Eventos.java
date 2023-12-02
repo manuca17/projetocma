@@ -1,6 +1,11 @@
 package models;
 
+import static androidx.navigation.Navigation.findNavController;
+
+import static java.sql.DriverManager.println;
+
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,17 +25,24 @@ public class Eventos extends BaseAdapter {
     String name[];
     int image[];
     String date[];
+    String description[];
+    String imgDescription[];
+
+    private OnItemClickListener onItemClickListener;
 
     LayoutInflater inflater;
 
-    public Eventos(Context context, String[] name, int[] image, String[] date) {
+    public Eventos(Context context, String[] name, int[] image, String[] date, OnItemClickListener onItemClickListener, String[] description,String[] ImgDescription) {
         this.context = context;
         this.name = name;
         this.image = image;
         this.date = date;
+        this.onItemClickListener = onItemClickListener;
+        this.description = description;
+        this.imgDescription = imgDescription;
+
     }
 
-    private Museu.OnItemClickListener onItemClickListener;
 
     @Override
     public int getCount() {
@@ -49,13 +61,13 @@ public class Eventos extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         if(inflater == null){
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
-        if(convertView == null){
-            convertView = inflater.inflate(R.layout.grid_event_item,null);
-        }
+        convertView = inflater.inflate(R.layout.grid_event_item, parent, false);
+
 
         ImageView imageView = convertView.findViewById(R.id.eventImage);
         TextView textView = convertView.findViewById(R.id.textViewEventTitle);
@@ -65,14 +77,17 @@ public class Eventos extends BaseAdapter {
         textView.setText(name[position]);
         textView1.setText(date[position]);
 
+
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("EventAdapter", "Item clicked at position: " + position);
                 if (onItemClickListener != null) {
                     onItemClickListener.onItemClick(position);
                 }
             }
         });
+
 
         return convertView;
     }

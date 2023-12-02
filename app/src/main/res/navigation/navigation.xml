@@ -54,7 +54,11 @@
         android:id="@+id/eventFragment"
         android:name="com.example.projetocma.EventFragment"
         android:label="fragment_event"
-        tools:layout="@layout/fragment_event" />
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_eventFragment_to_eventDetail"
+            app:destination="@id/eventDetail" />
+    </fragment>
     <fragment
         android:id="@+id/qrCode"
         android:name="com.example.projetocma.QrCode"
@@ -74,4 +78,18 @@
         android:name="com.example.projetocma.TimePicker"
         android:label="fragment_time_picker"
         tools:layout="@layout/fragment_time_picker" />
+    <fragment
+        android:id="@+id/eventDetail"
+        android:name="com.example.projetocma.EventDetail"
+        android:label="fragment_event_detail"
+        tools:layout="@layout/fragment_event_detail" >
+        <action
+            android:id="@+id/action_eventDetail_to_eventBottomSheet"
+            app:destination="@id/eventBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventBottomSheet"
+        android:name="com.example.projetocma.EventBottomSheet"
+        android:label="fragment_event_bottom_sheet"
+        tools:layout="@layout/fragment_event_bottom_sheet" />
 </navigation>

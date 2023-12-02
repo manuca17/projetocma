@@ -5,14 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <com.google.android.material.card.MaterialCardView
         android:layout_width="362dp"
         android:layout_height="348dp"
-        android:clickable="true"
         app:strokeColor="#525252"
         app:strokeWidth="2dp"
-        android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
