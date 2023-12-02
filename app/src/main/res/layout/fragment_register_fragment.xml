@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF">
 
     <!-- User -->
 
@@ -60,8 +61,8 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/rectangle_text"
         android:elevation="2dp"
-        android:paddingLeft="10dp"
         android:hint="Username"
+        android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hello_welco" />
@@ -124,8 +125,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="32dp"
         android:background="@drawable/rectangle_button"
+        android:backgroundTint="#605E79"
         android:text="Register"
         android:textColor="#FFFFFF"
+        android:textColorLink="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRegisterTelefone" />
@@ -197,9 +200,6 @@
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@+id/google_logo"
         app:layout_constraintTop_toBottomOf="@+id/google_logo" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
