@@ -34,6 +34,10 @@ class MuseusPageFrag : Fragment() {
             // Navigate to the destination fragment
             findNavController().navigate(R.id.qrCode)
         }
+        binding.reserveButton.setOnClickListener {
+            // Navigate to the destination fragment
+            findNavController().navigate(R.id.reservePage)
+        }
 
     }
 

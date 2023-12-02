@@ -3,81 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AccountFragmentTickets">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/partilha_icone_bilhete_evento"
-        android:layout_width="32dp"
-        android:layout_height="37dp"
-        app:srcCompat="@drawable/partilha_icone"
-        tools:layout_editor_absoluteX="309dp"
-        tools:layout_editor_absoluteY="347dp" />
-
-    <EditText
-        android:id="@+id/editTextBilheteEvento"
-        android:layout_width="282dp"
-        android:layout_height="53dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rectangle_text"
-        android:elevation="2dp"
-        android:hint="Bilhete Evento"
-        android:paddingLeft="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBilheteMuseu" />
-
-    <EditText
-        android:id="@+id/editTextBilheteMuseu"
-        android:layout_width="282dp"
-        android:layout_height="53dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rectangle_text"
-        android:elevation="2dp"
-        android:hint="Bilhete Museu"
-        android:paddingLeft="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBilheteBasico" />
-
-    <ImageView
-        android:id="@+id/partilha_icone_bilhete_museu"
-        android:layout_width="32dp"
-        android:layout_height="37dp"
-        app:srcCompat="@drawable/partilha_icone"
-        tools:layout_editor_absoluteX="309dp"
-        tools:layout_editor_absoluteY="256dp" />
-
-    <EditText
-        android:id="@+id/editTextBilheteBasico"
-        android:layout_width="282dp"
-        android:layout_height="53dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/rectangle_text"
-        android:elevation="2dp"
-        android:hint="Bilhete Básico"
-        android:paddingLeft="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ver_tickets" />
-
-    <ImageView
-        android:id="@+id/back_icone_tickets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/ver_tickets"
-        app:layout_constraintTop_toTopOf="@+id/ver_tickets"
-        app:srcCompat="@drawable/seta_back"
-        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/ver_tickets"
@@ -91,11 +18,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/partilha_icone_bilhete_basico"
-        android:layout_width="32dp"
-        android:layout_height="37dp"
-        app:srcCompat="@drawable/partilha_icone"
-        tools:layout_editor_absoluteX="309dp"
-        tools:layout_editor_absoluteY="164dp" />
+        android:id="@+id/back_icone_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ver_tickets"
+        app:layout_constraintEnd_toStartOf="@+id/ver_tickets"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ver_tickets"
+        app:srcCompat="@drawable/seta_back" />
 
+
+    <TextView
+        android:id="@+id/TextBilheteBasico"
+        android:layout_width="282dp"
+        android:layout_height="53dp"
+        android:textSize="20sp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/rectangle_text"
+        android:hint="Bilhete Básico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ver_tickets" />
+
+    <ImageView
+        android:id="@+id/partilha_icone_bilhete_basico"
+        android:layout_width="42dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/partilha_icone"
+        app:layout_constraintBottom_toBottomOf="@+id/TextBilheteBasico"
+        app:layout_constraintEnd_toEndOf="@+id/TextBilheteBasico"
+        app:layout_constraintTop_toTopOf="@+id/TextBilheteBasico"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
