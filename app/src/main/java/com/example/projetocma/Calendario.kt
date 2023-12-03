@@ -4,42 +4,57 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.projetocma.databinding.FragmentCalendarioBinding
 import java.util.*
 
 class Calendario : Fragment() {
-    // Variáveis para TextView e CalendarView
-    private lateinit var dateTV: TextView
-    private lateinit var calendarView: CalendarView
+    private var _binding: FragmentCalendarioBinding? = null
+    private val binding get() = _binding!!
+
+    private var selectedDate: Date? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflar o layout para este fragmento
-        val view = inflater.inflate(R.layout.fragment_calendario, container, false)
-        // ver data dateTV = view.findViewById(R.id.idTVDate)
-        calendarView = view.findViewById(R.id.calendarView)
+    ): View {
+        _binding = FragmentCalendarioBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-
-        // Definir o idioma desejado para o calendário (por exemplo, francês)
-        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
+        binding.calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val calendar = Calendar.getInstance()
             calendar.set(year, month, dayOfMonth)
 
-            val locale = Locale("pt") // Definir o idioma para portugues
-
+            val locale = Locale("pt")
             val dateFormat = java.text.SimpleDateFormat("dd MMMM yyyy", locale)
+            selectedDate = calendar.time
             val date = dateFormat.format(calendar.time)
 
-            // Definir a data formatada no TextView para exibição
-            //dateTV.text = date
+            // Você pode realizar qualquer ação com a data selecionada aqui
         }
 
+        binding.buttonNextEvent.setOnClickListener {
+            // Navegar para o fragmento de destino
+            findNavController().navigate(R.id.timePicker)
+        }
 
-        return view
+        binding.buttonBackEvent.setOnClickListener {
+            // Faça qualquer coisa que desejar ao clicar no botão "Anterior"
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    fun getSelectedDate(): Date? {
+        return selectedDate
     }
 }

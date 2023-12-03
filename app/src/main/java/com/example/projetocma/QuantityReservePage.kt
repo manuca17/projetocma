@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-class ReservePage : Fragment() {
+class QuantityReservePage : Fragment() {
     private var adultsCount = 0
     private var childCount = 0
     private lateinit var adultsCountTextView: TextView

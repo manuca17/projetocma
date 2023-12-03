@@ -36,7 +36,7 @@ class MuseusPageFrag : Fragment() {
         }
         binding.reserveButton.setOnClickListener {
             // Navigate to the destination fragment
-            //findNavController().navigate(R.id.reservePage)
+            findNavController().navigate(R.id.calendario)
         }
 
     }
