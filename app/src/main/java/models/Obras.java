@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.projetocma.R;
 
-public class Museu extends BaseAdapter {
+public class Obras extends BaseAdapter {
 
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -26,12 +26,12 @@ public class Museu extends BaseAdapter {
 
     LayoutInflater inflater;
 
-    public Museu(Context context, String[] name, int[] image, OnItemClickListener onItemClickListener, String[] description) {
+    public Obras(Context context, String[] name, int[] image, String[] description, OnItemClickListener onItemClickListener) {
         this.context = context;
         this.name = name;
         this.image = image;
-        this.onItemClickListener = onItemClickListener;
         this.description = description;
+        this.onItemClickListener = onItemClickListener;
     }
 
     @Override
@@ -51,7 +51,6 @@ public class Museu extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
         if(inflater == null){
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
@@ -63,8 +62,8 @@ public class Museu extends BaseAdapter {
         ImageView imageView = convertView.findViewById(R.id.gridImage);
         TextView textView = convertView.findViewById(R.id.gridName);
 
-            imageView.setImageResource(image[position]);
-            textView.setText(name[position]);
+        imageView.setImageResource(image[position]);
+        textView.setText(name[position]);
 
         convertView.setOnClickListener(v -> {
             if (onItemClickListener != null) {
@@ -73,5 +72,6 @@ public class Museu extends BaseAdapter {
         });
 
         return convertView;
+
     }
 }

@@ -37,6 +37,12 @@
         <action
             android:id="@+id/action_museuDetail_to_fragmentTickets"
             app:destination="@id/fragmentTickets" />
+        <action
+            android:id="@+id/action_museuDetail_to_historiaMuseu"
+            app:destination="@id/historiaMuseu" />
+        <action
+            android:id="@+id/action_museuDetail_to_obrasExplore"
+            app:destination="@id/obrasExplore" />
     </fragment>
     <fragment
         android:id="@+id/register_fragment"
@@ -145,4 +151,41 @@
             android:id="@+id/action_ticketMuseum_to_reservePage"
             app:destination="@id/reservePage" />
     </fragment>
+    <fragment
+        android:id="@+id/historiaMuseu"
+        android:name="com.example.projetocma.HistoriaMuseu"
+        android:label="fragment_historia_museu"
+        tools:layout="@layout/fragment_historia_museu" >
+        <action
+            android:id="@+id/action_historiaMuseu_to_historiaBottomSheet"
+            app:destination="@id/historiaBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/historiaBottomSheet"
+        android:name="com.example.projetocma.historiaBottomSheet"
+        android:label="fragment_historia_bottom_sheet"
+        tools:layout="@layout/fragment_historia_bottom_sheet" />
+    <fragment
+        android:id="@+id/obrasExplore"
+        android:name="com.example.projetocma.ObrasExplore"
+        android:label="fragment_obras_explore"
+        tools:layout="@layout/fragment_obras_explore" >
+        <action
+            android:id="@+id/action_obrasExplore_to_obrasDetail"
+            app:destination="@id/obrasDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/obrasDetail"
+        android:name="com.example.projetocma.ObrasDetail"
+        android:label="fragment_obras_detail"
+        tools:layout="@layout/fragment_obras_detail" >
+        <action
+            android:id="@+id/action_obrasDetail_to_obrasBottomSheet"
+            app:destination="@id/obrasBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/obrasBottomSheet"
+        android:name="com.example.projetocma.ObrasBottomSheet"
+        android:label="fragment_obras_bottom_sheet"
+        tools:layout="@layout/fragment_obras_bottom_sheet" />
 </navigation>

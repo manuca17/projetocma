@@ -5,14 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-
-class AccountFragmentContact : Fragment() {
+import com.example.projetocma.databinding.FragmentHistoriaBottomSheetBinding
 
 
+class historiaBottomSheet : Fragment() {
+
+    private lateinit var binding: FragmentHistoriaBottomSheetBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,8 +20,8 @@ class AccountFragmentContact : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account_contact, container, false)
+        binding = FragmentHistoriaBottomSheetBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 }

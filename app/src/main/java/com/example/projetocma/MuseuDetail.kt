@@ -10,8 +10,8 @@ import com.example.projetocma.databinding.FragmentMuseuDetailBinding
 
 class MuseuDetail : Fragment() {
 
-    private var _binding: FragmentMuseuDetailBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentMuseuDetailBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -20,13 +20,7 @@ class MuseuDetail : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMuseuDetailBinding.inflate(inflater, container, false)
-        return binding.root
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentMuseuDetailBinding.inflate(inflater, container, false)
 
         binding.eventosButton.setOnClickListener{
             findNavController().navigate(R.id.eventFragment)
@@ -38,16 +32,27 @@ class MuseuDetail : Fragment() {
 
         // Retrieve arguments
         val name = arguments?.getString("name")
+        val description = arguments?.getString("description")
         val imageResId = arguments?.getInt("image")
-
-        // Now you can use 'name' and 'imageResId' in your fragment
-
-        // Example: Set the name in a TextView
         binding.textViewMuseumName.text = name
 
-        // Example: Set the image in an ImageView
+        binding.historiaButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("name", name)
+            bundle.putInt("image", imageResId?:0)
+            bundle.putString("description", description)
+
+            findNavController().navigate(R.id.historiaMuseu, bundle)
+        }
+        binding.obrasButton.setOnClickListener {
+            findNavController().navigate(R.id.obrasExplore)
+        }
         imageResId?.let { binding.museumImage.setImageResource(it) }
+
+        return binding.root
+
     }
+
 
 
 }
