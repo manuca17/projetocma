@@ -17,7 +17,7 @@ class ObrasExplore : Fragment(), Obras.OnItemClickListener {
     private lateinit var binding: FragmentObrasExploreBinding
 
     private val names = arrayOf("A noite estrelada", "O grito", "Abaporu")
-    private val img = arrayOf(R.drawable.obra1, R.drawable.obra2, R.drawable.obra3).toIntArray()
+    private val img = arrayOf(R.drawable.museudamarinha, R.drawable.museudelaplata, R.drawable.ticket_museum).toIntArray()
     private val description = arrayOf("asdasdasdasdasd", "asdasdasdasdasd", "asdasdasdasd")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

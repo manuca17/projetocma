@@ -48,6 +48,21 @@
         app:layout_constraintStart_toStartOf="@+id/home_title"
         app:layout_constraintTop_toBottomOf="@+id/home_title" />
 
+
+    <TextView
+        android:id="@+id/date_picked"
+        android:layout_width="333dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="64dp"
+        android:text="data"
+        android:textAppearance="@style/calendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selecione_o"
+        android:textAlignment="center"/>
+
     <View
         android:id="@+id/view"
         android:layout_width="315dp"
@@ -62,39 +77,26 @@
         app:layout_constraintVertical_bias="0.008" />
 
     <Button
-        android:id="@+id/calendario_anterior"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/botao_anterior_seguinte"
+        android:id="@+id/button_next_event3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#409FC7"
         android:text="Seguinte"
-        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/calendario_seguinte"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:id="@+id/button_back_event3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:background="@drawable/botao_anterior_seguinte"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#409FC7"
-        android:backgroundTintMode="add"
         android:text="Anterior"
-        android:textSize="10sp"
-
-        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TimePicker
         android:id="@+id/timePicker2"
