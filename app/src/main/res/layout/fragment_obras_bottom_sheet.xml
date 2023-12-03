@@ -34,8 +34,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottomSheetImg"
-        app:layout_constraintVertical_bias="0.0"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/bottomSheetObrasImg"
+        app:layout_constraintVertical_bias="0.028"></TextView>
+
+    <TextView
+        android:id="@+id/textViewImgObrasName"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfitsemibold"
+        android:text="asdadsadsadasasd"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomSheetObrasImg"
+        app:layout_constraintVertical_bias="0.13"></TextView>
 
     <TextView
         android:id="@+id/textViewObrasDescription"
@@ -49,6 +63,6 @@
         app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewImgObrasDescription"
-        app:layout_constraintVertical_bias="0.098"></TextView>
+        app:layout_constraintVertical_bias="0.205"></TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,18 +20,20 @@ public class Obras extends BaseAdapter {
     String name[];
     int image[];
     String description[];
+    String imgDescription[];
 
     private OnItemClickListener onItemClickListener;
 
 
     LayoutInflater inflater;
 
-    public Obras(Context context, String[] name, int[] image, String[] description, OnItemClickListener onItemClickListener) {
+    public Obras(Context context, String[] name, int[] image, String[] description, OnItemClickListener onItemClickListener, String[] imgDescription) {
         this.context = context;
         this.name = name;
         this.image = image;
         this.description = description;
         this.onItemClickListener = onItemClickListener;
+        this.imgDescription = imgDescription;
     }
 
     @Override
