@@ -1,80 +1,89 @@
 package com.example.projetocma
+
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.projetocma.databinding.FragmentReservePageBinding
 
-class QuantityReservePage : Fragment() {
+class QuantityReservePage() : Fragment(), Parcelable {
+    private lateinit var binding: FragmentReservePageBinding
     private var adultsCount = 0
     private var childCount = 0
-    private lateinit var adultsCountTextView: TextView
-    private lateinit var childCountTextView: TextView
+
+    constructor(parcel: Parcel) : this() {
+        adultsCount = parcel.readInt()
+        childCount = parcel.readInt()
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(adultsCount)
+        parcel.writeInt(childCount)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<QuantityReservePage> {
+        override fun createFromParcel(parcel: Parcel): QuantityReservePage {
+            return QuantityReservePage(parcel)
+        }
+
+        override fun newArray(size: Int): Array<QuantityReservePage?> {
+            return arrayOfNulls(size)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_reserve_page, container, false)
+        binding = FragmentReservePageBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-        adultsCountTextView = view.findViewById(R.id.adultsCount)
-
-        childCountTextView = view.findViewById(R.id.childCount)
-
-
-
-        val addAdultButton: Button = view.findViewById(R.id.addAdultButton)
-        addAdultButton.setOnClickListener {
-            addAdult()
+        binding.addAdultButton.setOnClickListener {
+            adultsCount++
+            binding.adultsCount.text = adultsCount.toString()
         }
 
-        val removeAdultButton: Button = view.findViewById(R.id.removeAdultButton)
-        removeAdultButton.setOnClickListener {
-            removeAdult()
+        binding.addChildButton.setOnClickListener {
+            childCount++
+            binding.childCount.text = childCount.toString()
         }
 
-        val addChildButton: Button = view.findViewById(R.id.addChildButton)
-        addAdultButton.setOnClickListener {
-            addAdult()
+        binding.removeAdultButton.setOnClickListener {
+            if (adultsCount > 0) {
+                adultsCount--
+                binding.adultsCount.text = adultsCount.toString()
+            }
         }
 
-        val removeChildButton: Button = view.findViewById(R.id.removeChildButton)
-        removeAdultButton.setOnClickListener {
-            removeAdult()
+        binding.removeChildButton.setOnClickListener {
+            if (childCount > 0) {
+                childCount--
+                binding.childCount.text = childCount.toString()
+            }
         }
 
+        binding.materialCardView2.setOnClickListener {
+            findNavController().navigate(R.id.calendario)
+        }
         return view
     }
-
-    private fun addAdult() {
-        adultsCount++
-        displayAdultsCount()
-    }
-
-    private fun removeAdult() {
-        if (adultsCount > 0) {
-            adultsCount--
-            displayAdultsCount()
-        }
-    }
-    private fun addChild() {
-        childCount++
-        displayChildCount()
-    }
-
-    private fun removeChild() {
-        if (childCount > 0) {
-            childCount--
-            displayChildCount()
-        }
-    }
-
-    private fun displayAdultsCount() {
-        adultsCountTextView.text = adultsCount.toString()
-    }
-    private fun displayChildCount() {
-        childCountTextView.text = childCount.toString()
-    }
 }
+
+
+
+
+
+
+
+
+
