@@ -17,11 +17,11 @@ import models.Eventos
 
 class EventFragment : Fragment(), Eventos.OnItemClickListener  {
 
-    private val titles = arrayOf("JOAN MIRÓ / ALEXANDER CALDER: ESPAÇO EM MOVIMENTO","JOAN MIRÓ / ALEXANDER CALDER: ESPAÇO EM MOVIMENTO","JOAN MIRÓ / ALEXANDER CALDER: ESPAÇO EM MOVIMENTO")
-    private val dates = arrayOf("22 JUN 2023 - 27 JAN 2024","22 JUN 2023 - 27 JAN 2024","22 JUN 2023 - 27 JAN 2024")
+    private val titles = arrayOf("JOAN MIRÓ / ALEXANDER CALDER: ESPAÇO EM MOVIMENTO")
+    private val dates = arrayOf("22 JUN 2023 - 27 JAN 2024")
     private val imgDescription = arrayOf("Joan Miró, Homage to Alexander Calder, 1977. Photo © Successió Miró / SPA, Lisboa 2023")
     private val description = arrayOf("O encontro entre Joan Miró e Alexander Calder representou uma das mais férteis amizades artísticas e diálogos visuais continuados do século XX. Os dois artistas conheceram-se em Paris no final de 1928 e permaneceram em contacto próximo até à morte de Calder, em 1976. Já em 1936, o jornal The New York World-Telegram descrevia os móbiles de Calder como “abstrações de Miró vivas”. Esta descrição é particularmente pertinente para as Constelações de mesa e de parede que Calder produziu em 1943 e que apresentam uma forte afinidade com a série homónima de Miró de 1940–41, embora tenham sido concebidas de forma completamente independente. Um imaginário em constelação era um princípio formal do trabalho de ambos. Em vez de construírem as suas imagens em torno de um núcleo central, como acontece nas abordagens tradicionais à pintura e à escultura, Joan Miró e Alexander Calder concebiam as suas obras como estruturas abertas, em que as formas flutuam livremente no espaço ou estão distribuídas uniformemente pela superfície da tela.")
-    private val img = arrayOf(R.drawable.joanmiro,R.drawable.joanmiro,R.drawable.joanmiro).toIntArray()
+    private val img = arrayOf(R.drawable.joanmiro).toIntArray()
 
     private lateinit var binding: FragmentEventBinding
     override fun onCreateView(

@@ -130,18 +130,12 @@
 
     <fragment
         android:id="@+id/fragmentTickets"
-        android:name="com.example.projetocma.Tickets"
+        android:name="com.example.projetocma.TicketsFragment"
         android:label="fragment_tickets"
         tools:layout="@layout/fragment_tickets" >
         <action
             android:id="@+id/action_fragmentTickets_to_ticketBasicc"
             app:destination="@id/ticketBasicc" />
-        <action
-            android:id="@+id/action_fragmentTickets_to_ticketEventt"
-            app:destination="@id/ticketEventt" />
-        <action
-            android:id="@+id/action_fragmentTickets_to_ticketMuseum"
-            app:destination="@id/ticketMuseum" />
     </fragment>
     <fragment
         android:id="@+id/ticketBasicc"
@@ -150,24 +144,6 @@
         tools:layout="@layout/fragment_ticket_basicc" >
         <action
             android:id="@+id/action_ticketBasicc_to_reservePage"
-            app:destination="@id/reservePage" />
-    </fragment>
-    <fragment
-        android:id="@+id/ticketEventt"
-        android:name="com.example.projetocma.TicketEvent"
-        android:label="fragment_ticket_eventt"
-        tools:layout="@layout/fragment_ticket_eventt" >
-        <action
-            android:id="@+id/action_ticketEventt_to_reservePage"
-            app:destination="@id/reservePage" />
-    </fragment>
-    <fragment
-        android:id="@+id/ticketMuseum"
-        android:name="com.example.projetocma.TicketMuseum"
-        android:label="fragment_ticket_museum"
-        tools:layout="@layout/fragment_ticket_museum" >
-        <action
-            android:id="@+id/action_ticketMuseum_to_reservePage"
             app:destination="@id/reservePage" />
     </fragment>
     <fragment

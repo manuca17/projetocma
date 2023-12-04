@@ -22,7 +22,7 @@
             android:name=".TicketsBasic"
             android:exported="false" />
         <activity
-            android:name=".Tickets"
+            android:name=".TicketsFragment"
             android:exported="false" />
         <activity
             android:name=".PaymentAcknowledgment"
