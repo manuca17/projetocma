@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class QuantityReservePage : Fragment() {
+class QuantityReserve : Fragment() {
     private var adultsCount = 0
     private var childCount = 0
     private lateinit var adultsCountTextView: TextView

@@ -49,11 +49,11 @@ class TimePicker : Fragment() {
            val selectedDate: Date? = arguments?.getSerializable("selectedDate") as? Date
            bundle.putSerializable("selectedDate", selectedDate)
 
-            val quantityReserveFragment = QuantityReservePage()
+            val quantityReserveFragment = QuantityReserve()
             quantityReserveFragment.arguments = bundle
 
             // Navegar para o fragmento de destino e passar os dados via Bundle
-            findNavController().navigate(R.id.reservePage, bundle)
+            findNavController().navigate(R.id.quantityReserve, bundle)
         }
 
         binding.buttonBackEvent3.setOnClickListener {

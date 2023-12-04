@@ -34,7 +34,7 @@ class TicketBasic : Fragment() {
 
 
         binding.buttonNextBasic.setOnClickListener {
-            findNavController().navigate(R.id.reservePage)
+            findNavController().navigate(R.id.quantityReserve)
         }
 
 
