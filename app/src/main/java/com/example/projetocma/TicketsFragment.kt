@@ -20,7 +20,7 @@ class TicketsFragment : Fragment(), Tickets.OnItemClickListener {
     private val names = arrayOf("Ticket Básico", "Ticket Evento", "Ticket Museu")
     private val price = arrayOf("9.50€", "10€", "12.50€")
     private val description = arrayOf("adasdas", "asdadasdas", "asdasdasdas")
-    private val image = arrayOf(R.drawable.ticket, R.drawable.ticket, R.drawable.ticket).toIntArray()
+    private val image = arrayOf(R.drawable.ticket_basic, R.drawable.ticket_museum, R.drawable.ticket_event).toIntArray()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

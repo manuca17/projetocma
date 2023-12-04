@@ -1,9 +1,9 @@
 package com.example.projetocma
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CalendarView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.projetocma.databinding.FragmentCalendarioBinding
@@ -40,8 +40,14 @@ class Calendario : Fragment() {
         }
 
         binding.buttonNextEvent.setOnClickListener {
-            // Navegar para o fragmento de destino
-            findNavController().navigate(R.id.timePicker)
+            val bundle = Bundle()
+            bundle.putSerializable("selectedDate", selectedDate)
+
+            val timePickerFragment = TimePicker()
+            timePickerFragment.arguments = bundle
+
+            // Navegação para o fragmento TimePicker com o Bundle contendo a data selecionada
+            findNavController().navigate(R.id.timePicker, bundle)
         }
 
         binding.buttonBackEvent.setOnClickListener {

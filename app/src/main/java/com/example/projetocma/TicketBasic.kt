@@ -22,19 +22,9 @@ class TicketBasic : Fragment() {
     ): View? {
         binding = FragmentTicketBasiccBinding.inflate(inflater, container, false)
 
-        val name = arguments?.getString("name")
-        val description = arguments?.getString("description")
-        val imageResId = arguments?.getInt("image")
-        val price = arguments?.getString("price")
-
-        binding.description.text= description
-        imageResId?.let { binding.ticketImg.setImageResource(it)}
-        binding.ticketName.text = name
-        binding.ticketPrice.text = price
-
-    binding.buttonNextBasic.setOnClickListener {
-        findNavController().navigate(R.id.reservePage)
-    }
+        binding.buttonNextBasic.setOnClickListener {
+            findNavController().navigate(R.id.quantityReserve)
+        }
 
 
         return binding.root
