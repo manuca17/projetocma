@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/museusPageFrag">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/museusPageFrag"
@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_museusPageFrag_to_qrCode"
             app:destination="@id/qrCode" />
-        <action
-            android:id="@+id/action_museusPageFrag_to_calendario"
-            app:destination="@id/calendario" />
     </fragment>
     <fragment
         android:id="@+id/museusExplore"
@@ -51,12 +48,23 @@
         android:id="@+id/register_fragment"
         android:name="com.example.projetocma.RegisterFragment"
         android:label="fragment_register_fragment"
-        tools:layout="@layout/fragment_register_fragment" />
+        tools:layout="@layout/fragment_register_fragment" >
+        <action
+            android:id="@+id/action_register_fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.projetocma.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_museusPageFrag"
+            app:destination="@id/museusPageFrag" />
+        <action
+            android:id="@+id/action_loginFragment_to_register_fragment"
+            app:destination="@id/register_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.projetocma.AccountFragment"
@@ -114,7 +122,11 @@
         android:id="@+id/reservePage"
         android:name="com.example.projetocma.QuantityReservePage"
         android:label="fragment_reserve_page"
-        tools:layout="@layout/fragment_reserve_page" />
+        tools:layout="@layout/fragment_reserve_page" >
+        <action
+            android:id="@+id/action_reservePage_to_calendario"
+            app:destination="@id/calendario" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragmentTickets"

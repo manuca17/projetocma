@@ -128,6 +128,15 @@
             app:layout_constraintEnd_toStartOf="@+id/editTextTelefoneContact"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="443dp" />
+
+        <TextView
+            android:id="@+id/sobrenome_contact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:text="Sobrenome"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
@@ -158,34 +167,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextSobrenomeContact" />
 
-    <EditText
-        android:id="@+id/editTextSobrenomeContact2"
-        android:layout_width="249dp"
-        android:layout_height="56dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rectangle_text"
-        android:elevation="2dp"
-        android:paddingLeft="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeContact" />
-
-    <EditText
-        android:id="@+id/editTextNomeContact2"
-        android:layout_width="280dp"
-        android:layout_height="56dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rectangle_text"
-        android:elevation="2dp"
-        android:paddingLeft="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/informacoes_contacto" />
-
     <ImageView
         android:id="@+id/back_icone_contact2"
         android:layout_width="wrap_content"
@@ -215,15 +196,6 @@
         app:layout_constraintEnd_toStartOf="@+id/editTextNomeContact"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="170dp" />
-
-    <TextView
-        android:id="@+id/sobrenome_contact2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:text="Sobrenome"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="262dp" />
 
     <TextView
         android:id="@+id/email_contact2"
