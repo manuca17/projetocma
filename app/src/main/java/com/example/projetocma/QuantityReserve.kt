@@ -59,13 +59,13 @@ class QuantityReserve : Fragment() {
         }
 
         val addChildButton: Button = view.findViewById(R.id.addChildButton)
-        addAdultButton.setOnClickListener {
-            addAdult()
+        addChildButton.setOnClickListener {
+            addChild()
         }
 
         val removeChildButton: Button = view.findViewById(R.id.removeChildButton)
-        removeAdultButton.setOnClickListener {
-            removeAdult()
+        removeChildButton.setOnClickListener {
+            removeChild()
         }
 
         return view
@@ -100,4 +100,7 @@ class QuantityReserve : Fragment() {
     private fun displayChildCount() {
         childCountTextView.text = childCount.toString()
     }
+
+
 }
+
