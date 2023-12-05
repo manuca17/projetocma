@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/museusPageFrag">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/museusPageFrag"
@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_museusPageFrag_to_qrCode"
             app:destination="@id/qrCode" />
-        <action
-            android:id="@+id/action_museusPageFrag_to_calendario"
-            app:destination="@id/calendario" />
     </fragment>
     <fragment
         android:id="@+id/museusExplore"
@@ -51,12 +48,26 @@
         android:id="@+id/register_fragment"
         android:name="com.example.projetocma.RegisterFragment"
         android:label="fragment_register_fragment"
-        tools:layout="@layout/fragment_register_fragment" />
+        tools:layout="@layout/fragment_register_fragment" >
+        <action
+            android:id="@+id/action_register_fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_register_fragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.projetocma.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_museusPageFrag"
+            app:destination="@id/museusPageFrag" />
+        <action
+            android:id="@+id/action_loginFragment_to_register_fragment"
+            app:destination="@id/register_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.projetocma.AccountFragment"
@@ -93,11 +104,7 @@
         android:id="@+id/timePicker"
         android:name="com.example.projetocma.TimePicker"
         android:label="fragment_time_picker"
-        tools:layout="@layout/fragment_time_picker" >
-        <action
-            android:id="@+id/action_timePicker_to_quantityReserve"
-            app:destination="@id/quantityReserve" />
-    </fragment>
+        tools:layout="@layout/fragment_time_picker" />
     <fragment
         android:id="@+id/eventDetail"
         android:name="com.example.projetocma.EventDetail"
@@ -115,35 +122,33 @@
         tools:layout="@layout/fragment_event_bottom_sheet" />
 
     <fragment
+        android:id="@+id/reservePage"
+        android:name="com.example.projetocma.QuantityReservePage"
+        android:label="fragment_reserve_page"
+        tools:layout="@layout/fragment_reserve_page" >
+        <action
+            android:id="@+id/action_reservePage_to_calendario"
+            app:destination="@id/calendario" />
+    </fragment>
+
+    <fragment
         android:id="@+id/fragmentTickets"
-        android:name="com.example.projetocma.Tickets"
+        android:name="com.example.projetocma.TicketsFragment"
         android:label="fragment_tickets"
         tools:layout="@layout/fragment_tickets" >
         <action
             android:id="@+id/action_fragmentTickets_to_ticketBasicc"
             app:destination="@id/ticketBasicc" />
-        <action
-            android:id="@+id/action_fragmentTickets_to_ticketEventt"
-            app:destination="@id/ticketEventt" />
-        <action
-            android:id="@+id/action_fragmentTickets_to_ticketMuseum"
-            app:destination="@id/ticketMuseum" />
     </fragment>
     <fragment
         android:id="@+id/ticketBasicc"
         android:name="com.example.projetocma.TicketBasic"
         android:label="fragment_ticket_basicc"
-        tools:layout="@layout/fragment_ticket_basicc" />
-    <fragment
-        android:id="@+id/ticketEventt"
-        android:name="com.example.projetocma.TicketEvent"
-        android:label="fragment_ticket_eventt"
-        tools:layout="@layout/fragment_ticket_eventt" />
-    <fragment
-        android:id="@+id/ticketMuseum"
-        android:name="com.example.projetocma.TicketMuseum"
-        android:label="fragment_ticket_museum"
-        tools:layout="@layout/fragment_ticket_museum" />
+        tools:layout="@layout/fragment_ticket_basicc" >
+        <action
+            android:id="@+id/action_ticketBasicc_to_reservePage"
+            app:destination="@id/reservePage" />
+    </fragment>
     <fragment
         android:id="@+id/historiaMuseu"
         android:name="com.example.projetocma.HistoriaMuseu"
@@ -181,14 +186,4 @@
         android:name="com.example.projetocma.ObrasBottomSheet"
         android:label="fragment_obras_bottom_sheet"
         tools:layout="@layout/fragment_obras_bottom_sheet" />
-    <fragment
-        android:id="@+id/quantityReserve"
-        android:name="com.example.projetocma.QuantityReserve"
-        android:label="fragment_quantity_reserve"
-        tools:layout="@layout/fragment_quantity_reserve" />
-    <fragment
-        android:id="@+id/confirmReserve"
-        android:name="com.example.projetocma.ConfirmReserve"
-        android:label="fragment_confirm_reserve"
-        tools:layout="@layout/fragment_confirm_reserve" />
 </navigation>
