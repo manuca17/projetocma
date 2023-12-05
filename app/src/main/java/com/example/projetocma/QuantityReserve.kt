@@ -6,11 +6,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
 class QuantityReserve : Fragment() {
+
     private var adultsCount = 0
     private var childCount = 0
     private lateinit var adultsCountTextView: TextView
@@ -20,9 +22,11 @@ class QuantityReserve : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val view = inflater.inflate(R.layout.fragment_quantity_reserve, container, false)
 
         val changeHourButton: Button = view.findViewById(R.id.change_hour)
+
 
         val selectedHour: Int? = arguments?.getInt("selectedHour")
         val selectedMinute: Int? = arguments?.getInt("selectedMinute")
@@ -68,6 +72,7 @@ class QuantityReserve : Fragment() {
             removeChild()
         }
 
+
         return view
     }
 
@@ -99,6 +104,47 @@ class QuantityReserve : Fragment() {
     }
     private fun displayChildCount() {
         childCountTextView.text = childCount.toString()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val buttonBackEvent: Button = view.findViewById(R.id.button_back_event2)
+        val changeData: Button = view.findViewById(R.id.button_change_date)
+        val changeHour: Button = view.findViewById(R.id.change_hour)
+
+
+
+        val buttonNextEvent: Button = view.findViewById(R.id.button_next_event2)
+        buttonNextEvent.setOnClickListener {
+            val bundle = Bundle()
+
+            // Adicionando os valores corretos ao Bundle
+            val selectedDate: Date? = arguments?.getSerializable("selectedDate") as? Date
+            val selectedHour: Int? = arguments?.getInt("selectedHour")
+            val selectedMinute: Int? = arguments?.getInt("selectedMinute")
+
+            bundle.putSerializable("selectedDate", selectedDate)
+            bundle.putInt("selectedHour", selectedHour ?: 0)
+            bundle.putInt("selectedMinute", selectedMinute ?: 0)
+
+            // Navegar para o próximo fragmento (confirmReserve) com o Bundle contendo data e hora
+            findNavController().navigate(R.id.confirmReserve, bundle)
+        }
+
+        buttonBackEvent.setOnClickListener {
+            // Navigate to the destination fragment
+            findNavController().navigate(R.id.timePicker)
+        }
+        changeData.setOnClickListener {
+            // Navigate to the destination fragment
+            findNavController().navigate(R.id.calendario)
+        }
+        changeHour.setOnClickListener {
+            // Navigate to the destination fragment
+            findNavController().navigate(R.id.timePicker)
+        }
+
+
     }
 
 

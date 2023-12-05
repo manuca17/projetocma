@@ -1,14 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfirmReserve">
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/confirmar_bilhete"
+        android:layout_width="162dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="176dp"
+        android:gravity="top"
+        android:lineSpacingExtra="-2sp"
+        android:text="O seu Bilhete"
+        android:textAppearance="@style/calendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <View
+        android:id="@+id/calendario_icone2"
+        android:layout_width="47dp"
+        android:layout_height="39dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/calendario_icone"
+        app:layout_constraintEnd_toStartOf="@+id/button_change_date2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_icone2" />
+
+    <View
+        android:id="@+id/relogio_icone"
+        android:layout_width="43dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/relogio"
+        app:layout_constraintBottom_toTopOf="@+id/text_total"
+        app:layout_constraintEnd_toStartOf="@+id/button_change_date2"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendario_icone2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/user_icone2"
+        android:layout_width="47dp"
+        android:layout_height="39dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/user_icone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmar_bilhete" />
+
+    <TextView
+        android:id="@+id/quantidade_adultos_t"
+        android:layout_width="262dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:gravity="top"
+        android:text="Adultos x1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/user_icone2"
+        app:layout_constraintTop_toBottomOf="@+id/confirmar_bilhete" />
+
+    <Button
+        android:id="@+id/button_change_date2"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="408dp"
+        android:backgroundTint="@color/black"
+        app:cornerRadius="10dp"
+        android:text="DATA"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/change_hour2"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="360dp"
+        android:backgroundTint="@color/black"
+        android:text="HORA"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_change_date2"
+        app:layout_constraintVertical_bias="0.937" />
+
+    <TextView
+        android:id="@+id/text_total"
+        android:layout_width="104dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:gravity="top"
+        android:text="Preço Total"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_hour2" />
+
+    <TextView
+        android:id="@+id/preco_total"
+        android:layout_width="104dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:text="19.00€"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_total" />
+
+    <TextView
+        android:id="@+id/impostos_text"
+        android:layout_width="161dp"
+        android:layout_height="19dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:text="Todos os impostos e taxas incluidos"
+        android:textAlignment="textStart"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_total" />
+
+    <Button
+        android:id="@+id/button_next_event4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="264dp"
+        android:backgroundTint="#409FC7"
+        app:cornerRadius="10dp"
+        android:text="Confirmar "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
