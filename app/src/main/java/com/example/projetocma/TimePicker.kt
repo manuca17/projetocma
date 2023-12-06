@@ -53,7 +53,7 @@ class TimePicker : Fragment() {
             quantityReserveFragment.arguments = bundle
 
             // Navegar para o fragmento de destino e passar os dados via Bundle
-            findNavController().navigate(R.id.quantityReserve, bundle)
+            findNavController().navigate(R.id.quantittyReserve, bundle)
         }
 
         binding.buttonBackEvent3.setOnClickListener {

@@ -56,7 +56,7 @@ class ConfirmReserve : Fragment() {
             findNavController().navigate(R.id.timePicker)
         }
         confirmar.setOnClickListener{
-            findNavController().navigate(R.id.paymentAcknowledgment2)
+            findNavController().navigate(R.id.paymentAcknowledgment)
         }
 
 

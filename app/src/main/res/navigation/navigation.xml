@@ -104,7 +104,11 @@
         android:id="@+id/timePicker"
         android:name="com.example.projetocma.TimePicker"
         android:label="fragment_time_picker"
-        tools:layout="@layout/fragment_time_picker" />
+        tools:layout="@layout/fragment_time_picker" >
+        <action
+            android:id="@+id/action_timePicker_to_quantittyReserve"
+            app:destination="@id/quantittyReserve" />
+    </fragment>
     <fragment
         android:id="@+id/eventDetail"
         android:name="com.example.projetocma.EventDetail"
@@ -122,13 +126,13 @@
         tools:layout="@layout/fragment_event_bottom_sheet" />
 
     <fragment
-        android:id="@+id/reservePage"
-        android:name="com.example.projetocma.QuantityReservePage"
+        android:id="@+id/quantittyReserve"
+        android:name="com.example.projetocma.QuantityReserve"
         android:label="fragment_reserve_page"
-        tools:layout="@layout/fragment_reserve_page" >
+        tools:layout="@layout/fragment_quantity_reserve" >
         <action
-            android:id="@+id/action_reservePage_to_calendario"
-            app:destination="@id/calendario" />
+            android:id="@+id/action_quantittyReserve_to_confirmReserve"
+            app:destination="@id/confirmReserve" />
     </fragment>
 
     <fragment
@@ -147,7 +151,7 @@
         tools:layout="@layout/fragment_ticket_basicc" >
         <action
             android:id="@+id/action_ticketBasicc_to_reservePage"
-            app:destination="@id/reservePage" />
+            app:destination="@id/quantittyReserve" />
     </fragment>
     <fragment
         android:id="@+id/historiaMuseu"
@@ -186,4 +190,17 @@
         android:name="com.example.projetocma.ObrasBottomSheet"
         android:label="fragment_obras_bottom_sheet"
         tools:layout="@layout/fragment_obras_bottom_sheet" />
+    <fragment
+        android:id="@+id/paymentAcknowledgment"
+        android:name="com.example.projetocma.PaymentAcknowledgment"
+        android:label="fragment_payment_acknowledgment"
+        tools:layout="@layout/fragment_payment_acknowledgment" />
+    <fragment
+        android:id="@+id/confirmReserve"
+        android:name="com.example.projetocma.ConfirmReserve"
+        android:label="ConfirmReserve" >
+        <action
+            android:id="@+id/action_confirmReserve_to_paymentAcknowledgment2"
+            app:destination="@id/paymentAcknowledgment" />
+    </fragment>
 </navigation>
